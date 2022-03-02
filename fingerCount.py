@@ -6,22 +6,22 @@ import pyrebase
 import time
 
 firebaseConfig = {
-  'apiKey': "AIzaSyDks-ba5_AXUXJd9NMGDiGP2iNuWknDlco",
-  'authDomain': "mediapipev2.firebaseapp.com",
-  'databaseURL': "https://mediapipev2-default-rtdb.firebaseio.com",
-  'projectId': "mediapipev2",
-  'storageBucket': "mediapipev2.appspot.com",
-  'messagingSenderId': "227799796749",
-  'appId': "1:227799796749:web:ecf1575697fcbde0ac1944",
-  'measurementId': "G-FQSRVV1M4E"
+  'apiKey': "*****************-*****************",
+  'authDomain': "*****************.firebaseapp.com",
+  'databaseURL': "**************************************",
+  'projectId': "*****************",
+  'storageBucket': "*****************.appspot.com",
+  'messagingSenderId': "*****************",
+  'appId': "1:*****************:web:*****************",
+  'measurementId': "*****************-*****************"
 }
 
 
 config = {
-    "apiKey": "AIzaSyDks-ba5_AXUXJd9NMGDiGP2iNuWknDlco",
-    "authDomain": "mediapipev1.firebaseapp.com",
-    "databaseURL": "https://mediapipev2-default-rtdb.firebaseio.com",
-    "storageBucket": "mediapipev1.appspot.com"
+    "apiKey": "*****************-*****************",
+    "authDomain": "*****************.firebaseapp.com",
+    "databaseURL": "https://*****************-*****************-*****************.*****************.com",
+    "storageBucket": "*****************.*****************.com"
 }
 firebase = pyrebase.initialize_app(firebaseConfig)
 
