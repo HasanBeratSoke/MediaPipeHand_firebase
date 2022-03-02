@@ -5,13 +5,25 @@ import pyrebase
 
 import time
 
+firebaseConfig = {
+  'apiKey': "AIzaSyDks-ba5_AXUXJd9NMGDiGP2iNuWknDlco",
+  'authDomain': "mediapipev2.firebaseapp.com",
+  'databaseURL': "https://mediapipev2-default-rtdb.firebaseio.com",
+  'projectId': "mediapipev2",
+  'storageBucket': "mediapipev2.appspot.com",
+  'messagingSenderId': "227799796749",
+  'appId': "1:227799796749:web:ecf1575697fcbde0ac1944",
+  'measurementId': "G-FQSRVV1M4E"
+}
+
+
 config = {
-    "apiKey": "AIzaSyCtGBHOtz8XIu6PsmrAXKfvurW6FsW_Vpk",
+    "apiKey": "AIzaSyDks-ba5_AXUXJd9NMGDiGP2iNuWknDlco",
     "authDomain": "mediapipev1.firebaseapp.com",
-    "databaseURL": "https://mediapipev1-default-rtdb.europe-west1.firebasedatabase.app",
+    "databaseURL": "https://mediapipev2-default-rtdb.firebaseio.com",
     "storageBucket": "mediapipev1.appspot.com"
 }
-firebase = pyrebase.initialize_app(config)
+firebase = pyrebase.initialize_app(firebaseConfig)
 
 firebase.database()
 db = firebase.database()
@@ -59,9 +71,10 @@ with mp_hands.Hands(
                 if y1 > y:
                     cv2.putText(image, text='KAPALI', org=(100, 100), fontScale=font, fontFace=4, color=(255, 255, 0),
                                 thickness=3)
-                    val = 0
-                    if val == 0:
-                        db.child("value").update({"val": val})
+                    val = '0'
+                    if val == '0':
+                        # db.child("value").update({"val": val})
+                        db.update({"val": val})
                         #time.sleep(0.1)
 
 
@@ -71,9 +84,10 @@ with mp_hands.Hands(
                 else:
                     cv2.putText(image, text='ACIK', org=(100, 100), fontScale=font, fontFace=4, color=(255, 255, 0),
                                 thickness=3)
-                    val = 1
-                    if val == 1:
-                        db.child("value").update({"val": val})
+                    val = '1'
+                    if val == '1':
+                        # db.child("value").update({"val": val})
+                        db.update({"val": val})
                         #time.sleep(0.1)
 
                 mp_drawing.draw_landmarks(
